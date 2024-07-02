@@ -10,4 +10,23 @@ int main() {
         {"Isabella", 1977, "School Teacher", 19000, "full"}
     };
 
+    int currentYear = 2024;
+    int olderThan60Count = 0;
+
+    cout << "Employees older than 60 years:\n";
+    for (int i = 0; i < count; ++i) {
+        if (currentYear - arr[i].birthDate > 60) {
+            cout << "Name " << arr[i].name << endl;
+            cout << "Year of birth: " << arr[i].birthDate << endl;
+            cout << "Position: " << arr[i].position << endl;
+            cout << "Salary: " << arr[i].salary << endl;
+            cout << "Education: " << arr[i].education << endl;
+            cout << "--------------------\n";
+            olderThan60Count++;
+        }
+    }
+
+    cout << "Older than 60 count: " << olderThan60Count << endl;
+    delete[] arr;
+
 }
